@@ -229,6 +229,7 @@
             // 
             // Cadastro
             // 
+            AcceptButton = btnCadastrese;
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(750, 530);

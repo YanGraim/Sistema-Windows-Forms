@@ -27,25 +27,22 @@ namespace PrimeiroProjetoWF {
             if (string.IsNullOrEmpty(usuario.Nome) || string.IsNullOrEmpty(usuario.Loggin) || string.IsNullOrEmpty(usuario.Senha) || string.IsNullOrEmpty(usuario.ConfirmaSenha)) {
                 MessageBox.Show("Por favor, preencha todos os campos");
             }
-            if (usuario.Senha != usuario.ConfirmaSenha) {
+            else if (usuario.Senha != usuario.ConfirmaSenha) {
                 MessageBox.Show("Senhas não correspondem!");
             }
+            else if (usuario.LoginExiste(db, usuario.Loggin)) {
+                MessageBox.Show("Login já está em uso. Por favor, escolha um login diferente.");
+            }
             else {
-                if (usuario.LoginExiste(db, usuario.Loggin)) {
-                    MessageBox.Show("Login já está em uso. Por favor, escolha um login diferente.");
-                }
-                else {
-                    string resultado = usuario.InserirUsuario(db, usuario);
-                    MessageBox.Show(resultado);
+                string resultado = usuario.InserirUsuario(db, usuario);
+                MessageBox.Show(resultado);
 
-                    if (resultado == "Usuário cadastrado com sucesso!") {
-                        var TelaLogin = new Login();
-                        TelaLogin.Show();
-                        this.Visible = false;
-                    }
-                }
+                var TelaLogin = new Login();
+                TelaLogin.Show();
+                this.Visible = false;
             }
         }
+
 
         private void btnFechar_Click(object sender, EventArgs e) {
             Application.Exit();

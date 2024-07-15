@@ -2,17 +2,11 @@ using System.Runtime.InteropServices;
 
 namespace PrimeiroProjetoWF {
     public partial class Login : Form {
-
-
-
-
         public Login() {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
         }
-
-
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
@@ -64,8 +58,6 @@ namespace PrimeiroProjetoWF {
             }
 
             if (retorno) {
-                //int codigoUsuario = usuarioLogado.ObterCodigoUsuario(usuario.Email);
-
                 UsuarioLogado.Codigo = usuario.ObterCodigoUsuario(usuario.Loggin);
                 UsuarioLogado.Loggin = usuario.Loggin;
                 var TelaInicio = new TelaInicio();

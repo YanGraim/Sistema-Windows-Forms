@@ -31,6 +31,8 @@
             label5 = new Label();
             Develop = new Label();
             panel1 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
             pictureBox2 = new PictureBox();
             panel4 = new Panel();
             txtSenha = new TextBox();
@@ -42,8 +44,6 @@
             label3 = new Label();
             linkEsqueceuSenha = new LinkLabel();
             btnFechar = new Button();
-            label1 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -150,6 +150,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 530);
             panel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.FromArgb(27, 25, 22);
+            label2.ForeColor = Color.Black;
+            label2.Image = Properties.Resources.icons8_senha_20;
+            label2.Location = new Point(71, 243);
+            label2.Name = "label2";
+            label2.Size = new Size(20, 17);
+            label2.TabIndex = 19;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.FromArgb(27, 25, 22);
+            label1.ForeColor = Color.Black;
+            label1.Image = Properties.Resources.icons8_usuário_201;
+            label1.Location = new Point(71, 187);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 17);
+            label1.TabIndex = 18;
             // 
             // pictureBox2
             // 
@@ -287,28 +307,9 @@
             btnFechar.UseVisualStyleBackColor = true;
             btnFechar.Click += btnFechar_Click;
             // 
-            // label1
-            // 
-            label1.BackColor = Color.FromArgb(27, 25, 22);
-            label1.ForeColor = Color.Black;
-            label1.Image = Properties.Resources.icons8_usuário_201;
-            label1.Location = new Point(71, 187);
-            label1.Name = "label1";
-            label1.Size = new Size(20, 17);
-            label1.TabIndex = 18;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.FromArgb(27, 25, 22);
-            label2.ForeColor = Color.Black;
-            label2.Image = Properties.Resources.icons8_senha_20;
-            label2.Location = new Point(71, 243);
-            label2.Name = "label2";
-            label2.Size = new Size(20, 17);
-            label2.TabIndex = 19;
-            // 
             // Login
             // 
+            AcceptButton = btnEntrar;
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
